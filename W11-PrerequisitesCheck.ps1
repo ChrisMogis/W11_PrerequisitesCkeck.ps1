@@ -6,7 +6,7 @@
 ################################################################################################
 
 #Variable
-$Information = "https://www.microsoft.com/fr-fr/windows/windows-11-specifications"
+$Information = "https://www.microsoft.com/en-US/windows/windows-11-specifications"
 
 #Architecture x64
 $Arch = (Get-CimInstance -Class CIM_ComputerSystem).SystemType
