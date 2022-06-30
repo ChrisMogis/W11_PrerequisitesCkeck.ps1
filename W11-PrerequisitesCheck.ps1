@@ -11,7 +11,6 @@ $Information = "https://www.microsoft.com/fr-fr/windows/windows-11-specification
 #Architecture x64
 $Arch = (Get-CimInstance -Class CIM_ComputerSystem).SystemType
 $ArchValue = "x64-based PC"
-
 if ($Arch -ne $ArchValue)
     #If Architecture is not OK
     {
