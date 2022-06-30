@@ -47,7 +47,7 @@ $Core = (Get-CimInstance -Class CIM_Processor | Select-Object *).NumberOfCores
 $CoreValue = 2
 $Frequency = (Get-CimInstance -Class CIM_Processor | Select-Object *).MaxClockSpeed
 $FrequencyValue = 1000
-if (($Core -gt $CoreValue) -and ($Frequency -gt $FrequencyValue))
+if (($Core -ge $CoreValue) -and ($Frequency -ge $FrequencyValue))
     {
     Write-Host "Processor is compatible with Windows 11" -foregroundcolor "green"
     }
