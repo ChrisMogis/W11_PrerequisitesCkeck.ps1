@@ -26,6 +26,23 @@ else
     Write-Host "Architecture x64 : OK" -foregroundcolor "green"
     }
 
+#Screen Resolution
+$ScreenInfo = (Get-CimInstance -ClassName Win32_VideoController).CurrentVerticalResolution
+$ValueMin = 720 
+if ($ScreenInfo -le $ValueMin)
+    #If Screen resolution is not OK
+    {
+    Write-Host "Screen resolution support : Not OK" -foregroundcolor "red"
+    Write-Host "Please you can see this site for more informations : $Information"
+    }
+
+else 
+
+    #If Screen resolution is OK
+    {
+    Write-Host "Screen resolution support : OK" -foregroundcolor "green"
+    }
+    
 #CPU composition
 $Core = (Get-CimInstance -Class CIM_Processor | Select-Object *).NumberOfCores
 $CoreValue = 2
